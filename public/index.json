@@ -1,0 +1,78 @@
+[
+{
+	"uri": "/1-create-new-aws-account/",
+	"title": "Create New AWS Account",
+	"tags": [],
+	"description": "",
+	"content": "Contents:\n Create Your Account Adding payment method Verify Your Phone Number Select a support plan Wait for account activation  Create Your Account  Go to the Amazon Web Service homepage. Choose Create an AWS Account in the top right. s Note: If you have signed in to AWS recently, it will show Sign In to the Console. Enter your account information, and choose Continue.\nImportant: Ensure you enter correct information, especially your email. If you don\u0026rsquo;t see the Create an AWS Account, click Sign In to the Console then choose Create a new AWS Account. Select your account type\nNote: Personal and professional have the same features. Enter your company or personal information. Read and check to accpet the AWS Customer Agreement. Choose Create Account and Continue.  Adding payment method  Enter your Credit/Debit Card information then choose Verify and Add.\nNote: You can choose another address for your account, choose Use a new address before Verify and Add.  Verify Your Phone Number  Enter your mobile phone. Enter security check then choose Send SMS. Enter the code that have sent to your phone.  Select a support plan  On Select a support plan page, choose one of available plan, to compare each plan, see Compare AWS Support Plans.  Wait for account activation  After you choose Support plan. Account are usually activated within a few minutes, but the process might take to 24 hours.\nYou can sign in to your AWS account during this time,The AWS homepage might display a button that shows Complete Sign Up during this time, even if you\u0026rsquo;ve completed all the steps in the sign-up process. After receive a confirm email when your account is active, you can access to all AWS services.  "
+},
+{
+	"uri": "/",
+	"title": "AWS Account Setup",
+	"tags": [],
+	"description": "",
+	"content": "Main Contents  Create AWS Account MFA Setup For AWS User (root) Admin User and Group Create IAM Role Verify Account Support Request  "
+},
+{
+	"uri": "/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/",
+	"title": "Virtual MFA Device",
+	"tags": [],
+	"description": "",
+	"content": "\rTo enable MFA, you must signed in AWS using your root user.\n\rEnable a Virtual MFA Device using Console To configure and enable a virtual MFA device:\n Sign in to AWS Console. In the top right of the navigation bar, you will see your account name, choose it and choose My Security Credentials then expand Multi-factor authentication (MFA).  Choose Active MFA. In Manage MFA Device, choose Virutal MFA device then choose Continue. Install a compatible app on your mobile device or computer. List of the application. After install application on your device, scan the QR code. In the MFA code 1, enter six digit number, wait 30 seconds enter the next six digit number and choose Assign MFA. Now you have done to enable Virtual MFA Device.  "
+},
+{
+	"uri": "/2-mfa-setup-for-aws-user-root/",
+	"title": "MFA setup for AWS User",
+	"tags": [],
+	"description": "",
+	"content": "Table of Contents  Enable using Virutal MFA Device Enable using U2F Security Key Enable using Other Hardware MFA Device  "
+},
+{
+	"uri": "/2-mfa-setup-for-aws-user-root/2-u2f-security-key/",
+	"title": "U2F Security",
+	"tags": [],
+	"description": "",
+	"content": "Contents\n Enable a U2F Security Key using Console  Enable a U2F Security Key using Console U2F Security Key is an open authentication that allow user to securely access to online service with one single security key and with no software needed.\n Sign in to AWS Console In the top right of the navigation bar, you will see your account name, choose it and choose My Security Credentials then expand Multi-factor authentication (MFA)  To manage U2F security key, you must have permission from following policy. In the left bar, choose Policies then choose Create policy, choose the JSON tab and paste the following:  {\r\u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;,\r\u0026#34;Statement\u0026#34;: [\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowManageOwnUserMFA\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;iam:DeactivateMFADevice\u0026#34;,\r\u0026#34;iam:EnableMFADevice\u0026#34;,\r\u0026#34;iam:GetUser\u0026#34;,\r\u0026#34;iam:ListMFADevices\u0026#34;,\r\u0026#34;iam:ResyncMFADevice\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: \u0026#34;arn:aws:iam::*:user/${aws:username}\u0026#34;\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;DenyAllExceptListedIfNoMFA\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Deny\u0026#34;,\r\u0026#34;NotAction\u0026#34;: [\r\u0026#34;iam:EnableMFADevice\u0026#34;,\r\u0026#34;iam:GetUser\u0026#34;,\r\u0026#34;iam:ListMFADevices\u0026#34;,\r\u0026#34;iam:ResyncMFADevice\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: \u0026#34;arn:aws:iam::*:user/${aws:username}\u0026#34;,\r\u0026#34;Condition\u0026#34;: {\r\u0026#34;BoolIfExists\u0026#34;: {\r\u0026#34;aws:MultiFactorAuthPresent\u0026#34;: \u0026#34;false\u0026#34;\r}\r}\r}\r]\r}\rChoose Review policy Enter the name of policy then choose Create policy In the left bar, choose Dashboard expand Active MFA on your root account then choose Manage MFA Expand Multi-factor authentication (MFA) then choose Active MFA In the Manage MFA Device, choose U2F security key then click Continue Insert the U2F security key into your computer\u0026rsquo;s USB port.  Tap the U2F security key, and then choose Close when U2F setup is complete.  "
+},
+{
+	"uri": "/3-create-admin-user-and-group/",
+	"title": "Admin User and Group",
+	"tags": [],
+	"description": "",
+	"content": "Contents:\n Create an Admin Group Create Admin User  Create an Admin Group  Sign In to the Console in AWS Web Service page Click your account name on the top right and choose My Security Credentials  In the left bar, choose Groups then choose Create Group Enter Group Name (Example:AdminGroup) and choose Next Step  Attach Policy click choose AdministratorAccess then choose Next Step  Review your Group name and Policies then choose Create Group  Create Admin User  In the left bar, choose Users then choose Add User Enter User name (Example:Admin) then click choose Programmatic access and choose Next:Permissions  In tab Add user to group choose AdminGroup we create before or to choose tab Attach existing policies directly and choose Administrator Access  Choose Next:Tags Tags is optional to organize, track, or control access for user, so you can add tags or not. Choose Next:Review Check the user details then choose Create User After create success, download .csv file to store Security Credentials for further features.  "
+},
+{
+	"uri": "/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/",
+	"title": "Hardware MFA Device",
+	"tags": [],
+	"description": "",
+	"content": "Contents\n Enable a Hardware MFA Device using Console  Enable a Hardware MFA Device using Console  Sign in to AWS Console. In the top right of the navigation bar, you will see your account name, choose it and choose My Security Credentials then expand Multi-factor authentication (MFA).  To manage Hardware MFA Device, you must have permission from following policy. In the left bar, choose Policies then choose Create policy, choose the JSON tab and paste the following:  {\r\u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;,\r\u0026#34;Statement\u0026#34;: [\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowManageOwnUserMFA\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;iam:DeactivateMFADevice\u0026#34;,\r\u0026#34;iam:EnableMFADevice\u0026#34;,\r\u0026#34;iam:GetUser\u0026#34;,\r\u0026#34;iam:ListMFADevices\u0026#34;,\r\u0026#34;iam:ResyncMFADevice\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: \u0026#34;arn:aws:iam::*:user/${aws:username}\u0026#34;\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;DenyAllExceptListedIfNoMFA\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Deny\u0026#34;,\r\u0026#34;NotAction\u0026#34;: [\r\u0026#34;iam:EnableMFADevice\u0026#34;,\r\u0026#34;iam:GetUser\u0026#34;,\r\u0026#34;iam:ListMFADevices\u0026#34;,\r\u0026#34;iam:ResyncMFADevice\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: \u0026#34;arn:aws:iam::*:user/${aws:username}\u0026#34;,\r\u0026#34;Condition\u0026#34;: {\r\u0026#34;BoolIfExists\u0026#34;: {\r\u0026#34;aws:MultiFactorAuthPresent\u0026#34;: \u0026#34;false\u0026#34;\r}\r}\r}\r]\r}\rChoose Review policy. Enter the name of policy then choose Create policy. In the left bar, choose Dashboard expand Active MFA on your root account then choose Manage MFA. Expand Multi-factor authentication (MFA) then choose Active MFA. Choose Other Hardware MFA Device click Continue. Enter the Serial Number on the back of device.  Enter MFA code 1 then wait 30 seconds and enter the MFA code 2. Choose Assign MFA.  "
+},
+{
+	"uri": "/4-aws-role/",
+	"title": "Create IAM Role",
+	"tags": [],
+	"description": "",
+	"content": "You can use IAM roles to delegate access to your AWS resources. With IAM roles, you can establish trust relationships between your trusting account and other AWS trusted accounts.\nContents:\n Create an AWS Role  Create an AWS Role  Sign in to AWS Management Console and open the IAM console at https://console.aws.amazon.com/iam/. In the navigation pane of the console, choose Roles and then choose Create role. Choose the Another AWS account role type. For Account ID, type the AWS account ID to which you want to grant access to your resources. If you are granting permissions to users from an account that you do not control, and the users will assume this role programmatically, then select Require external ID. If you want to restrict the role to users who sign in with multi-factor authentication (MFA), select Require MFA.  Choose Next: Permissions. IAM includes a list of the AWS managed and customer managed policies in your account. Select the policy to use for the permissions policy or choose Create policy to open a new browser tab and create a new policy from scratch. For more information, see step 4 in the procedure Creating IAM Policies (Console). (Optional) Set a permissions boundary.  Choose Next: Tags. (Optional) Add metadata to the role by attaching tags as key–value pairs. Choose Next: Review. For Role name, type a name for your role. Role names must be unique within your AWS account. They are not distinguished by case. (Optional) For Role description, type a description for the new role.  Review the role and then choose Create role.  "
+},
+{
+	"uri": "/5-verify-new-account/",
+	"title": "Account Support Request",
+	"tags": [],
+	"description": "",
+	"content": "Contents:\n Recheck Account Information Create support case to AWS Support  When you are creating AWS Account, at the phone verification step, if you don\u0026rsquo;t receive an SMS message or call from AWS you can follow below steps to complete your verification:\nRecheck Account Information Firstly, please recheck your input in account information to make sure all the information is correct:\n You\u0026rsquo;ve entered your telephone number and selected your country code correctly during the sign-up process. If you\u0026rsquo;re using a mobile phone, be sure that you have a cellular signal to receive SMS messages or calls. The information that you entered for your payment method is correct.  Create support case to AWS Support If you didn\u0026rsquo;t receive an SMS or call to complete the identity verification process, AWS Support can help you to activate your account manually:\nBe sure that you can be reached at the telephone number that you provided for your AWS account.\n\r Open the AWS Support console, choose Create case.  Choose Account and billing support:  Type: select Account. Category: select Activation. Subject: provide the summary for your case (VD: Did not receive an SMS message or call for verification) Description: provide case details and a date and time when you can be reached. Attachments: attach images related to the case.    In the Contact options section, select Chat for Contact methods.  Choose Submit. AWS Support will contact and support you to activate your account manually.  You can create a case with AWS Support even if your account isn\u0026rsquo;t yet activated.\n\r"
+},
+{
+	"uri": "/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
