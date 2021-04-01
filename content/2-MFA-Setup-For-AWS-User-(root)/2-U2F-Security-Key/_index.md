@@ -9,6 +9,10 @@ pre = "<b>2.2. </b>"
 **Contents**
 - [Enable a U2F Security Key using Console](#enable-a-u2f-security-key-using-console)
 
+{{%notice tip%}}
+If you do not have a MFA hardware device, you can skip the steps below.
+{{%/notice%}}
+
 #### Enable a U2F Security Key using Console
 
 U2F Security Key is an open authentication that allow user to securely access to online service with one single security key and with no software needed.

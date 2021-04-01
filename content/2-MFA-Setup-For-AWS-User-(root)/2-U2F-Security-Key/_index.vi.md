@@ -9,7 +9,10 @@ pre = "<b>2.2. </b>"
 **Nội dung**
 - [Kích hoạt khóa bảo mật U2F thông qua Console](#kích-hoạt-khóa-bảo-mật-u2f-thông-qua-console)
 
-**Nếu bạn không có thiết bị phần cứng , có thể bỏ qua các thao tác dưới đây nhé.**
+
+{{%notice tip%}}
+Nếu bạn không có thiết bị phần cứng , có thể bỏ qua các thao tác dưới đây nhé.
+{{%/notice%}}
 
 #### Kích hoạt khóa bảo mật U2F thông qua Console
 
