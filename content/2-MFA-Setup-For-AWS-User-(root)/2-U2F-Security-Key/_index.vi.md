@@ -9,6 +9,8 @@ pre = "<b>2.2. </b>"
 **Nội dung**
 - [Kích hoạt khóa bảo mật U2F thông qua Console](#kích-hoạt-khóa-bảo-mật-u2f-thông-qua-console)
 
+**Nếu bạn không có thiết bị phần cứng , có thể bỏ qua các thao tác dưới đây nhé.**
+
 #### Kích hoạt khóa bảo mật U2F thông qua Console
 
 U2F Security Key là một giao thức chứng thực mở cho phép người dùng có thể truy cập các dịch vụ trực tuyết với một khóa bảo mật duy nhất mà không cần sử dụng đến bất kì phần mềm nào.
