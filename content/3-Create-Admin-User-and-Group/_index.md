@@ -1,46 +1,45 @@
 +++
-title = "Admin User and Group"
+title = "Tài khoản và Nhóm Admin"
 date = 2020
 weight = 3
 chapter = false
 pre = "<b>3. </b>"
 +++
 
-**Contents:**
-- [Create an Admin Group](#create-an-admin-group)
-- [Create Admin User](#create-admin-user)
+Trong bước này, chúng ta sẽ tạo Admin Group trước và gán quyền AdministratorAccess cho nó. Sau đó, chúng ta sẽ tạo Admin User và thêm nó vào Admin Group để cho Admin User được hưởng quyền AdministratorAccess mà chúng ta đã gán vào Admin Group trước đấy.
 
-#### Create an Admin Group
+**Nội dung:**
+- [Tạo Admin Group](#tạo-admin-group)
+- [Tạo Admin User](#tạo-admin-user)
 
-1. **Sign In to the Console** in [AWS Web Service page](https://aws.amazon.com/)
-2. Click your account name on the top right and choose **My Security Credentials**
+#### Tạo Admin Group
 
-![Image](/images/1-account-setup/MySecurity.png?width=15pc)
+1.	**Đăng nhập vào Bảng điều khiển** ở trang [AWS Web Service page](https://aws.amazon.com/)
+2.	Nhấn vào tên tài khoản ở góc trên bên phải và chọn **My Security Credentials**
 
-3. In the left bar, choose **Groups** then choose **Create Group**
-4. Enter Group Name (Example:AdminGroup) and choose **Next Step**
+![Image](/images/1-account-setup/MySecurity_v1.png?width=12pc)
 
-![Image](/images/1-account-setup/GroupName.png?width=90pc)
+3.	Ở thanh bên trái, chọn **User Groups** sau đó chọn **Create Group**
+4.	Nhập tên Group (Ví dụ: AdminGroup) dưới **User group name** <!-- updated: according to new version-->
 
-5. Attach Policy click choose **AdministratorAccess** then choose **Next Step**
+![Image](/images/1-account-setup/GroupName_v2.png?width=90pc) <!-- updated: according to new version-->
 
-![Image](/images/1-account-setup/GroupPolicy.png?width=90pc)
+5.	Ở phần Gán Quyền, gõ **AdministratorAccess** vào hộp tìm kiếm và nhấn Enter. Sau dó, tick vào **AdministratorAccess** và chọn **Create Group** <!-- updated: according to new version-->
 
-6. Review your Group name and Policies then choose **Create Group**
-   
-#### Create Admin User
+![Image](/images/1-account-setup/GroupPolicy_v2.png?width=90pc) <!-- updated: according to new version-->
 
-1. In the left bar, choose **Users** then choose **Add User**
-2. Enter User name (Example:Admin) then click choose **Programmatic access** and choose **Next:Permissions**
+#### Tạo Admin User
+
+1.	Ở thanh bên trái, chọn **Users** sau đó chọn **Add User**
+2.	Nhập tên User (Ví dụ: Admin) sau đó nhấn chọn **Programmatic access** và chọn **Next:Permissions**
 
 ![Image](/images/1-account-setup/AddUser.png?width=90pc)
 
-3. In tab **Add user to group** choose **AdminGroup** we create before or to choose tab **Attach existing policies directly** and choose **Administrator Access**
+3.	Ở tab **Add user to group** chọn **AdminGroup** mà chúng ta tạo trước đó hoặc chọn tab **Attach existing policies directly** và chọn **Administrator Access**
 
 ![Image](/images/1-account-setup/UserPolicy.png?width=90pc)
 
-4. Choose **Next:Tags**
-5. Tags is optional to organize, track, or control access for user, so you can add tags or not.
-6. Choose **Next:Review**
-7. Check the user details then choose **Create User**
-8. After create success, download **.csv** file to store Security Credentials for further features.
+4.	Chọn **Next:Tags**. **Tags** (thẻ) là một tùy chọn không bắt buộc để tổ chức, theo dõi, hoặc điều khiển truy cập của user, thế nên bạn có thể thêm tags hoặc không.
+5.	Chọn **Next:Review**.
+6.	Kiểm tra thông tin chi tiết user sau đó chọn **Create User**.
+7.	Sau khi tạo thành công, download file **.csv** để lưu trữ Security Credential cho những tính năng sau này.

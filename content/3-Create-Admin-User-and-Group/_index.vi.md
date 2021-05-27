@@ -6,6 +6,8 @@ chapter = false
 pre = "<b>3. </b>"
 +++
 
+Trong bước này, chúng ta sẽ tạo Admin Group trước và gán quyền AdministratorAccess cho nó. Sau đó, chúng ta sẽ tạo Admin User và thêm nó vào Admin Group để cho Admin User được hưởng quyền AdministratorAccess mà chúng ta đã gán vào Admin Group trước đấy.
+
 **Nội dung:**
 - [Tạo Admin Group](#tạo-admin-group)
 - [Tạo Admin User](#tạo-admin-user)
@@ -15,18 +17,16 @@ pre = "<b>3. </b>"
 1.	**Đăng nhập vào Bảng điều khiển** ở trang [AWS Web Service page](https://aws.amazon.com/)
 2.	Nhấn vào tên tài khoản ở góc trên bên phải và chọn **My Security Credentials**
 
-![Image](/images/1-account-setup/MySecurity.png?width=15pc)
+![Image](/images/1-account-setup/MySecurity_v1.png?width=12pc)
 
-3.	Ở thanh bên trái, chọn **Groups** sau đó chọn **Create Group**
-4.	Nhập tên Group (Ví dụ: AdminGroup) và chọn **Next Step**
+3.	Ở thanh bên trái, chọn **User Groups** sau đó chọn **Create Group**
+4.	Nhập tên Group (Ví dụ: AdminGroup) dưới **User group name** <!-- updated: according to new version-->
 
-![Image](/images/1-account-setup/GroupName.png?width=90pc)
+![Image](/images/1-account-setup/GroupName_v2.png?width=90pc) <!-- updated: according to new version-->
 
-5.	Ở phần Gán Quyền nhấn chọn **AdministratorAccesss** sau đó chọn **Next Step**
+5.	Ở phần Gán Quyền, gõ **AdministratorAccess** vào hộp tìm kiếm và nhấn Enter. Sau dó, tick vào **AdministratorAccess** và chọn **Create Group** <!-- updated: according to new version-->
 
-![Image](/images/1-account-setup/GroupPolicy.png?width=90pc)
-
-6.	Xem lại tên Group và các Quyền và chọn **Create Group**
+![Image](/images/1-account-setup/GroupPolicy_v2.png?width=90pc) <!-- updated: according to new version-->
 
 #### Tạo Admin User
 
@@ -39,8 +39,7 @@ pre = "<b>3. </b>"
 
 ![Image](/images/1-account-setup/UserPolicy.png?width=90pc)
 
-4.	Chọn **Next:Tags**
-5.	Tags (thẻ) là một tùy chọn không bắt buộc để tổ chức, theo dõi, hoặc điều khiển truy cập của user, thế nên bạn có thể thêm tags hoặc không
-6.	Chọn **Next:Review**
-7.	Kiểm tra thông tin chi tiết user sau đó chọn **Create User**
-8.	Sau khi tạo thành công, download file **.csv** để lưu trữ Security Credential cho những tính năng sau này.
+4.	Chọn **Next:Tags**. **Tags** (thẻ) là một tùy chọn không bắt buộc để tổ chức, theo dõi, hoặc điều khiển truy cập của user, thế nên bạn có thể thêm tags hoặc không.
+5.	Chọn **Next:Review**.
+6.	Kiểm tra thông tin chi tiết user sau đó chọn **Create User**.
+7.	Sau khi tạo thành công, download file **.csv** để lưu trữ Security Credential cho những tính năng sau này.

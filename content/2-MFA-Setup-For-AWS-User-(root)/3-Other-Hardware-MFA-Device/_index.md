@@ -1,22 +1,23 @@
 +++
-title = "Hardware MFA Device"
-date = 2020
+title = "Thiết bị MFA cứng"
+date = 2021
 weight = 3
 chapter = false
 pre = "<b>2.3. </b>"
 +++
 
-**Contents**
-- [Enable a Hardware MFA Device using Console](#enable-a-hardware-mfa-device-using-console)
+**Nội dung**
 
-#### Enable a Hardware MFA Device using Console
+  - [Kích hoạt thiết bị MFA phần cứng khác thông qua Console](#kích-hoạt-thiết-bị-mfa-phần-cứng-khác-thông-qua-console)
 
-1. Sign in to AWS Console.
-2. In the top right of the navigation bar, you will see your account name, choose it and choose **My Security Credentials** then expand Multi-factor authentication (MFA).
+#### Kích hoạt thiết bị MFA phần cứng khác thông qua Console
 
-![Image](/images/1-account-setup/MySecurity.png?width=15pc)
+1. Đăng nhập vào AWS Console.
+2. Góc trên bên phải, bạn sẽ thấy tên account của bạn, chọn vào và chọn **My Security Credentials** sau đó mở rộng Multi-factor authentication (MFA).
 
-3. To manage Hardware MFA Device, you must have permission from following policy. In the left bar, choose **Policies** then choose **Create policy**, choose the **JSON** tab and paste the following:
+![Image](/images/1-account-setup/MySecurity_v1.png?width=15pc)
+
+3. Để quản lí khóa bảo mật U2F, bạn phải có quyền từ bộ quyền sau. ở thanh bên trái, chọn **Policies** sau đó chọn **Create policy**, chọn **JSON** tab và dán phần bên dưới vào:
 
 ```js
 {
@@ -54,14 +55,24 @@ pre = "<b>2.3. </b>"
 }
 ```
 
-4. Choose **Review policy**.
-5. Enter the name of policy then choose **Create policy**.
-6. In the left bar, choose **Dashboard** expand **Active MFA on your root account** then choose **Manage MFA**.
-7. Expand Multi-factor authentication (MFA) then choose **Active MFA**.
-8. Choose **Other Hardware MFA Device** click **Continue**.
-9. Enter the **Serial Number** on the back of device.
+4. Chọn **Next: Tags**. Đây là màn hình về **Tags** một công cụ dùng để phân biệt các tài nguyên của AWS.
+5. Chọn  **Next: Review**. Đây là màn hình cho phép bạn review về bộ quyền mà bạn đang tạo ra. 
+5. Nhập tên bộ quyền (ví dụ: MFAHardDevice) và chọn **Create policy**.
+
+![MFA Policy](/images/1-account-setup/MFAPolicy.png?width=90pc)
+
+6. Ở thanh bên trái , chọn **Dashboard** và sau đó chọn **Enable MFA**.
+
+![Dashboard](/images/1-account-setup/Dashboard.png?width=90pc)
+
+7. Mở rộng Multi-factor authentication (MFA) sau đó chọn **Active MFA**.
+
+![MFA Section](/images/1-account-setup/MFA.png?width=90pc)
+
+8. Trong **Manage MFA Device**, chọn **Other Hardware MFA Device** sau đó nhấn **Continue**.
+9. Nhập **Serial Number** ở đằng sau thiết bị.
 
 ![Image](/images/1-account-setup/HardwareMFA.png?width=30pc)
 
-10. Enter MFA code 1 then wait 30 seconds and enter the MFA code 2.
-11. Choose **Assign MFA**.
+10. Nhập MFA code 1 sau đó đợi 30 giây và nhập MFA code 2.
+11. Chọn **Assign MFA**.

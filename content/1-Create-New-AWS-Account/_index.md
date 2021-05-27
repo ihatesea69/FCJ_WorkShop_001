@@ -1,48 +1,48 @@
 +++
-title = "Create New AWS Account"
+title = "Tạo mới tài khoản AWS"
 date = 2020-05-14T00:38:32+07:00
 weight = 1
 chapter = false
 pre = "<b>1. </b>"
 +++
 
-**Contents:**
-- [Create Your Account](#create-your-account)
-- [Adding payment method](#adding-payment-method)
-- [Verify Your Phone Number](#verify-your-phone-number)
-- [Select a support plan](#select-a-support-plan)
-- [Wait for account activation](#wait-for-account-activation)
 
-#### Create Your Account
+**Nội dung:**
+- [Tạo tài khoản AWS](#tạo-tài-khoản-aws)
+- [Thêm phương thức thanh toán](#thêm-phương-thức-thanh-toán)
+- [Xác thực số điện thoại của bạn](#xác-thực-số-điện-thoại-của-bạn)
+- [Chọn Support Plan](#chọn-support-plan)
+- [Đợi account của bạn được kích hoạt](#đợi-account-của-bạn-được-kích-hoạt)
 
-1. Go to the [Amazon Web Service homepage](https://aws.amazon.com/).
-2. Choose **Create an AWS Account** in the top right.  s
-**Note**: If you have signed in to AWS recently, it will show **Sign In to the Console**.
-3. Enter your account information, and choose **Continue**.  
-**Important**: Ensure you enter correct information, especially your email. If you don't see the **Create an AWS Account**, click **Sign In to the Console** then choose **Create a new AWS Account**.
-4. Select your account type  
-**Note**: Personal and professional have the same features.
-5. Enter your company or personal information.
-6. Read and check to accpet the [AWS Customer Agreement](https://aws.amazon.com/agreement/).
-7. Choose **Create Account** and **Continue**.
+#### Tạo tài khoản AWS
 
-#### Adding payment method
+1. Đi đến trang [Amazon Web Service homepage](https://aws.amazon.com/).
+2. Chọn **Create an AWS Account** ở góc trên bên phải.  
+    - ***Ghi Chú:** Nếu bạn không thấy **Create an AWS Account**, chọn **Sign In to the Console** sau đó chọn **Create a new AWS Account**.*
+3. Nhập thông tin tài khoảng và chọn **Continue**.  
+    - ***Quan Trọng**: Hãy chắc chắn bạn nhập đúng thông tin, đặc biệt là email.* 
+4. Chọn loại account.  
+    - ***Ghi chú**: Personal và Professional đều có chung tính năng.*
+5. Nhập thông tin công ty hoặc thông tin cá nhân của bạn.
+6. Đọc và đồng ý [AWS Customer Agreement](https://aws.amazon.com/agreement/).
+7. Chọn **Create Account** và **Continue**.
 
-- Enter your Credit/Debit Card information then choose **Verify and Add**.  
-**Note**: You can choose another address for your account, choose **Use a new address** before **Verify and Add**.
+#### Thêm phương thức thanh toán
 
-#### Verify Your Phone Number
+- Nhập thông tin thẻ tín dụng của bạn và chọn **Verify and Add**.  
+    - ***Ghi chú**: Bạn có thể chọn 1 địa chỉ khác cho tài khoản của bạn bằng cách chọn **Use a new address** trước khi **Verify and Add**.*
 
-1. Enter your mobile phone.
-2. Enter security check then choose **Send SMS**.
-3. Enter the code that have sent to your phone.
+#### Xác thực số điện thoại của bạn
 
-#### Select a support plan
+1. Nhập số điện thoại.
+2. Nhập mã security check sau đó chọn **Send SMS**.
+3. Nhập mã code được gửi đến số điện thoại của bạn.
 
-- On **Select a support plan** page, choose one of available plan, to compare each plan, see [Compare AWS Support Plans](https://aws.amazon.com/premiumsupport/plans/).
+#### Chọn Support Plan
 
-#### Wait for account activation
+- Trong trang **Select a support plan**, chọn 1 plan có hiệu lực, để so sánh giữa cách plan, bạn hãy xem [Compare AWS Support Plans](https://aws.amazon.com/premiumsupport/plans/).
 
-- After you choose **Support plan**. Account are usually activated within a few minutes, but the process **might take to 24 hours**.  
-You can sign in to your AWS account during this time,The AWS homepage might display a button that shows **Complete Sign Up** during this time, even if you've completed all the steps in the sign-up process.
-- After receive a confirm email when your account is active, you can access to all AWS services.
+#### Đợi account của bạn được kích hoạt
+
+- Sau khi chọn **Support plan**, account thường được kích sau sau vài phút, nhưng quá trình có thể cần tốn đến 24 tiếng. Bạn vẫn có thể đăng nhập vào account AWS lúc này, Trang chủ AWS có thể sẽ hiển thị một nút “Complete Sign Up” trong thời gian này, cho dù bạn đã hoàn thành tất cả các bước ở phần đăng kí.  
+- Sau khi nhận được email xác nhận account của bạn đã được kích hoạt, bạn có thể truy cập vào tất cả dịch vụ của AWS.

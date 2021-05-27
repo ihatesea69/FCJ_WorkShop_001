@@ -18,23 +18,8 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/"
-                />
-  </url>
-  
-  <url>
     <loc>/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -48,8 +33,38 @@
   </url>
   
   <url>
+    <loc>/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/"
+                />
+  </url>
+  
+  <url>
+    <loc>/2-mfa-setup-for-aws-user-root/2-u2f-security-key/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-mfa-setup-for-aws-user-root/2-u2f-security-key/"
+                />
+  </url>
+  
+  <url>
     <loc>/2-mfa-setup-for-aws-user-root/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -63,17 +78,17 @@
   </url>
   
   <url>
-    <loc>/2-mfa-setup-for-aws-user-root/2-u2f-security-key/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/"
+                href="/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-mfa-setup-for-aws-user-root/2-u2f-security-key/"
+                href="/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/"
                 />
   </url>
   
@@ -89,21 +104,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/3-create-admin-user-and-group/"
-                />
-  </url>
-  
-  <url>
-    <loc>/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/"
                 />
   </url>
   
@@ -134,6 +134,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="/5-verify-new-account/"
+                />
+  </url>
+  
+  <url>
+    <loc>/4-verify-new-account/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-verify-new-account/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-verify-new-account/"
                 />
   </url>
   

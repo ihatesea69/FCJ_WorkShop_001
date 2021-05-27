@@ -12,21 +12,21 @@
     <title>Thiết bị MFA ảo :: Thiết lập AWS Account</title>
 
     
-    <link href="/css/nucleus.css?1617273453" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1617273453" rel="stylesheet">
-    <link href="/css/hybrid.css?1617273453" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1617273453" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1617273453" rel="stylesheet">
-    <link href="/css/auto-complete.css?1617273453" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1617273453" rel="stylesheet">
-    <link href="/css/theme.css?1617273453" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1617273453" rel="stylesheet">
+    <link href="/css/nucleus.css?1622134530" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1622134530" rel="stylesheet">
+    <link href="/css/hybrid.css?1622134530" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1622134530" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1622134530" rel="stylesheet">
+    <link href="/css/auto-complete.css?1622134530" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1622134530" rel="stylesheet">
+    <link href="/css/theme.css?1622134530" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1622134530" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1617273453" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1622134530" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1617273453"></script>
+    <script src="/js/jquery-3.3.1.min.js?1622134530"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1617273453"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1617273453"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1622134530"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1622134530"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1617273453"></script>
+<script type="text/javascript" src="/js/search.js?1622134530"></script>
 
     
   </div>
@@ -263,6 +263,32 @@
         ">
       <a href="/vi/4-aws-role/">
           <b>4. </b>Tạo IAM Role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-verify-new-account/" title="Hỗ trợ Xác thực Tài khoản" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-verify-new-account/">
+          <b>5. </b>Hỗ trợ Xác thực Tài khoản
           
             <i class="fas fa-check read-icon"></i>
           
@@ -481,15 +507,23 @@
 <p>Để thiết lập và kích hoạt thiết bị MFA ảo:</p>
 <ol>
 <li>Đăng nhập vào AWS Console.</li>
-<li>Góc trên bên phải, bạn sẽ thấy tên account của bạn, chọn vào và chọn <strong>My Security Credentials</strong> sau đó mở rộng Multi-factor authentication (MFA).</li>
+<li>Góc trên bên phải, bạn sẽ thấy tên account của bạn, chọn vào và chọn <strong>My Security Credentials</strong>.</li>
 </ol>
-<p><img src="/images/1-account-setup/MySecurity.png?width=15pc" alt="Virtual MFA Device"></p>
+<p><img src="/images/1-account-setup/MySecurity_v1.png?width=15pc" alt="Virtual MFA Device"></p>
 <ol start="3">
-<li>Chọn <strong>Active MFA</strong>.</li>
+<li>Mở rộng <strong>Multi-factor authentication (MFA)</strong> và chọn <strong>Active MFA</strong>.</li>
+</ol>
+<p><img src="/images/1-account-setup/MFA.png?width=90pc" alt="MFA Section"></p>
+<ol start="4">
 <li>Trong Manage MFA Device, chọn <strong>Virtual MFA device</strong> sau đó chọn <strong>Continue</strong>.</li>
-<li>Cài đặt ứng dụng tương thích trên điện thoại hoặc máy tính của bạn. <a href="https://aws.amazon.com/iam/features/mfa/?audit=2019q1">Danh sách ứng dụng</a>.</li>
-<li>Sau khi cài đặt ứng dụng, scan mã QR.</li>
-<li>Ở ô MFA code 1, nhập 6 kí tự số trong app, đợi 30 giây sau đó nhập tiếp 6 kí tự số và chọn <strong>Assign MFA</strong>.</li>
+<li>Cài đặt ứng dụng tương thích trên điện thoại của bạn. <a href="https://aws.amazon.com/iam/features/mfa/?audit=2019q1">Danh sách ứng dụng MFA</a>.</li>
+<li>Sau khi cài đặt ứng dụng, chọn <strong>Show QR Code</strong> và dùng điện thoại đang mở ứng dụng MFA của bạn để scan mã QR.
+<ul>
+<li>*<strong>Ví dụ:</strong> Bạn đang sử dụng <em>Microsoft Authenticator</em>.
+<img src="/images/1-account-setup/MFAScannerQR.png?width=90pc" alt="MFA QR Scanner"></li>
+</ul>
+</li>
+<li>Ở ô <strong>MFA code 1</strong>, nhập 6 kí tự số trong app, đợi 30 giây sau đó nhập tiếp 6 kí tự số vào ô <strong>MFA Code 2</strong> và chọn <strong>Assign MFA</strong>.</li>
 <li>Bây giờ bạn đã hoàn thành kích hoạt <strong>thiết bị MFA ảo</strong>.</li>
 </ol>
 
@@ -665,6 +699,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
         
@@ -687,19 +737,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1617273453"></script>
-    <script src="/js/perfect-scrollbar.min.js?1617273453"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1617273453"></script>
-    <script src="/js/jquery.sticky.js?1617273453"></script>
-    <script src="/js/featherlight.min.js?1617273453"></script>
-    <script src="/js/highlight.pack.js?1617273453"></script>
+    <script src="/js/clipboard.min.js?1622134530"></script>
+    <script src="/js/perfect-scrollbar.min.js?1622134530"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1622134530"></script>
+    <script src="/js/jquery.sticky.js?1622134530"></script>
+    <script src="/js/featherlight.min.js?1622134530"></script>
+    <script src="/js/highlight.pack.js?1622134530"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1617273453"></script>
-    <script src="/js/learn.js?1617273453"></script>
-    <script src="/js/hugo-learn.js?1617273453"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1622134530"></script>
+    <script src="/js/learn.js?1622134530"></script>
+    <script src="/js/hugo-learn.js?1622134530"></script>
 
-    <link href="/mermaid/mermaid.css?1617273453" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1617273453"></script>
+    <link href="/mermaid/mermaid.css?1622134530" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1622134530"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
