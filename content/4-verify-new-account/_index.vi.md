@@ -3,7 +3,7 @@ title = "Hỗ trợ Xác thực Tài khoản"
 date = 2020
 weight = 5
 chapter = false
-pre = "<b>5. </b>"
+pre = "<b>4. </b>"
 +++
 
 **Nội dung:**
