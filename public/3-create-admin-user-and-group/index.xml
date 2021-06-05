@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tài khoản và Nhóm Admin on AWS Account Setup</title>
+    <title>Tạo Admin Group và Admin User on AWS Account Setup</title>
     <link>/3-create-admin-user-and-group/</link>
-    <description>Recent content in Tài khoản và Nhóm Admin on AWS Account Setup</description>
+    <description>Recent content in Tạo Admin Group và Admin User on AWS Account Setup</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Jan 1970 07:33:40 +0700</lastBuildDate>
-    
-	<atom:link href="/3-create-admin-user-and-group/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 01 Jan 1970 07:33:41 +0700</lastBuildDate><atom:link href="/3-create-admin-user-and-group/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
