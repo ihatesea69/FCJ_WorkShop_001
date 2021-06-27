@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>/vi/1-create-new-aws-account/</loc>
     <lastmod>2020-05-14T00:38:32+07:00</lastmod>
@@ -14,7 +15,9 @@
                 hreflang="vi"
                 href="/vi/1-create-new-aws-account/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>/vi/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -27,7 +30,9 @@
                 hreflang="vi"
                 href="/vi/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>/vi/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -40,7 +45,9 @@
                 hreflang="vi"
                 href="/vi/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -53,7 +60,9 @@
                 hreflang="vi"
                 href="/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>/vi/2-mfa-setup-for-aws-user-root/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -66,7 +75,9 @@
                 hreflang="vi"
                 href="/vi/2-mfa-setup-for-aws-user-root/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>/vi/4-verify-new-account/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -79,7 +90,9 @@
                 hreflang="vi"
                 href="/vi/4-verify-new-account/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -92,7 +105,9 @@
                 hreflang="vi"
                 href="/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>/vi/3-create-admin-user-and-group/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -105,7 +120,9 @@
                 hreflang="vi"
                 href="/vi/3-create-admin-user-and-group/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>/vi/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -117,7 +134,9 @@
                 hreflang="vi"
                 href="/vi/categories/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>/vi/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -130,4 +149,5 @@
                 href="/vi/tags/"
                 />
   </url>
+  
 </urlset>

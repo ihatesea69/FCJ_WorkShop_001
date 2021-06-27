@@ -5,6 +5,10 @@
     <link>/1-create-new-aws-account/</link>
     <description>Recent content in Tạo mới tài khoản AWS on AWS Account Setup</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 14 May 2020 00:38:32 +0700</lastBuildDate><atom:link href="/1-create-new-aws-account/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 May 2020 00:38:32 +0700</lastBuildDate>
+    
+	<atom:link href="/1-create-new-aws-account/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>
