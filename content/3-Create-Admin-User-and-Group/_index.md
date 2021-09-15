@@ -18,7 +18,7 @@ pre = "<b>3. </b>"
 
 ![Image](/images/1-account-setup/GroupName.png?width=90pc)
 
-5.	Ở phần **Attach permissions policies**, gõ **AdministratorAccesss** vào thanh tìm kiếm và nhấn chọn nó. Cuối cùng, chọn **Create Group**.
+5.	Ở phần **Attach permissions policies**, gõ **AdministratorAccess** vào thanh tìm kiếm và nhấn chọn nó. Cuối cùng, chọn **Create Group**.
 
 ![Image](/images/1-account-setup/GroupPolicy.png?width=90pc)
 
