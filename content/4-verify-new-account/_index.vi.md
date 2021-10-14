@@ -1,9 +1,9 @@
 +++
 title = "Hỗ trợ Xác thực Tài khoản"
 date = 2021
-weight = 3
+weight = 4
 chapter = false
-pre = "<b>3. </b>"
+pre = "<b>4. </b>"
 +++
 
 **Nội dung:**
