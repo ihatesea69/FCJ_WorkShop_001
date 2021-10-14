@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Khóa bảo mật U2F on AWS Account Setup</title>
+    <title>U2F Security Key on AWS Account Setup</title>
     <link>/2-mfa-setup-for-aws-user-root/2-u2f-security-key/</link>
-    <description>Recent content in Khóa bảo mật U2F on AWS Account Setup</description>
+    <description>Recent content in U2F Security Key on AWS Account Setup</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 01 Jan 1970 07:33:41 +0700</lastBuildDate>
     
