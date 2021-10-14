@@ -25,7 +25,7 @@ languageName = "English"
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-facebook'></i> AWS Study Group"
 identifier = "AWS Study Group FB"
-url = "www.facebook.com/groups/awsstudygroupfcj/"
+url = "https://www.facebook.com/groups/awsstudygroupfcj/"
 weight = 20
 
 [Languages.vi]
@@ -36,6 +36,6 @@ languageName = "Tiếng Việt"
 [[Languages.vi.menu.shortcuts]]
 name = "<i class='fab fa-facebook'></i> AWS Study Group"
 identifier = "AWS Study Group FB"
-url = "www.facebook.com/groups/awsstudygroupfcj/"
+url = "https://www.facebook.com/groups/awsstudygroupfcj/"
 weight = 20
 
