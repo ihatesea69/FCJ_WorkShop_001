@@ -2,13 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Getting Support for Account Authentication on AWS Account Setup</title>
-    <link>/4-verify-new-account/</link>
+    <link>//localhost:1313/4-verify-new-account/</link>
     <description>Recent content in Getting Support for Account Authentication on AWS Account Setup</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Jan 1970 07:33:40 +0700</lastBuildDate>
-    
-	<atom:link href="/4-verify-new-account/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="//localhost:1313/4-verify-new-account/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

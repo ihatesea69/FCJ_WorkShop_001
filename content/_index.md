@@ -1,15 +1,19 @@
 +++
-title = "Setting up an AWS account"
-date = 2021
+title = "Building a Serverless Text-to-Speech Application with Amazon Polly"
+date = 2024
 weight = 1
 chapter = false
 +++
 
-# Creating your first AWS account
+# Building a Serverless Text-to-Speech Application with Amazon Polly
 
 #### Overview
-In this first lab, you will be creating your new **AWS** account and use Multi-factor Authentication (**MFA**) to improve your account security. Next, you will create an **Administrator Group** and **Admin User** to manage access to resources in your account instead of using the root user. \
-Finally, we will step through account authentication with **AWS Support** in the event you experience authentication problems.
+In general, speech synthesis is not easy. You cannot assume that when an application reads each letter of a sentence, the output makes sense. A few common challenges for text-to-speech applications include:
+
+1. Words that are written the same way, but that are pronounced differently: I live in Las Vegas compared to This presentation broadcasts live from Las Vegas.
+Text normalization: Disambiguating abbreviations, acronyms, and units: St., which can be expanded as Street or Saint.
+Converting text to phonemes in languages with complex mapping, such as, in English, tough, through, and though. In this example, similar parts of different words can be pronounced differently depending on the word and context.
+Foreign words (déjà vu), proper names (François Hollande) and slang (ASAP, LOL).
 
 #### AWS Account
 **An AWS account** is the basic container for all the AWS resources you can create as an AWS customer. By default, each AWS account will have a _root user_. The _root user_ has full access within your AWS account, and root user permissions cannot be limited. When you first create your AWS account, you will be assessing it as the _root user_.

@@ -1,9 +1,9 @@
 +++
-title = "Creating an Administrator Group and Admin User"
+title = "Create a DynamoDB table"
 date = 2021
 weight = 3
 chapter = false
-pre = "<b>3. </b>"
+pre = "<b>3.1 </b>"
 +++
 
 #### Creating an Admininistrator Group

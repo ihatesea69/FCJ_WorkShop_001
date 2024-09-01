@@ -2,13 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Thiết lập Tài Khoản AWS on Thiết lập AWS Account</title>
-    <link>/vi/</link>
+    <link>//localhost:1313/vi/</link>
     <description>Recent content in Thiết lập Tài Khoản AWS on Thiết lập AWS Account</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Jan 1970 07:33:41 +0700</lastBuildDate>
-    
-	<atom:link href="/vi/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="//localhost:1313/vi/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

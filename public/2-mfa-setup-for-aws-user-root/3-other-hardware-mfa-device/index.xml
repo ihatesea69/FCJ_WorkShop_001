@@ -2,13 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hardware MFA Device on AWS Account Setup</title>
-    <link>/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/</link>
+    <link>//localhost:1313/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/</link>
     <description>Recent content in Hardware MFA Device on AWS Account Setup</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Jan 1970 07:33:41 +0700</lastBuildDate>
-    
-	<atom:link href="/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="//localhost:1313/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

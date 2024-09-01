@@ -1,5 +1,5 @@
 +++
-title = "MFA for AWS Accounts"
+title = "Environment Setup"
 date = 2021
 weight = 2
 chapter = false

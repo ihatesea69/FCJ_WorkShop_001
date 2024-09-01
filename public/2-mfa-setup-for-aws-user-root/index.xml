@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MFA for AWS Accounts on AWS Account Setup</title>
-    <link>/2-mfa-setup-for-aws-user-root/</link>
-    <description>Recent content in MFA for AWS Accounts on AWS Account Setup</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Jan 1970 07:33:41 +0700</lastBuildDate>
-    
-	<atom:link href="/2-mfa-setup-for-aws-user-root/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <title>Environment Setup on AWS Account Setup</title>
+    <link>//localhost:1313/2-mfa-setup-for-aws-user-root/</link>
+    <description>Recent content in Environment Setup on AWS Account Setup</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="//localhost:1313/2-mfa-setup-for-aws-user-root/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

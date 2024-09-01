@@ -1,5 +1,5 @@
 +++
-title = "Creating a new AWS account"
+title = "Workshop Outline"
 date = 2020-05-14T00:38:32+07:00
 weight = 1
 chapter = false

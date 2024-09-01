@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo Admin Group và Admin User :: Thiết lập AWS Account</title>
 
     
-    <link href="/css/nucleus.css?1634205109" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1634205109" rel="stylesheet">
-    <link href="/css/hybrid.css?1634205109" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1634205109" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1634205109" rel="stylesheet">
-    <link href="/css/auto-complete.css?1634205109" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1634205109" rel="stylesheet">
-    <link href="/css/theme.css?1634205109" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1634205109" rel="stylesheet">
+    <link href="/css/nucleus.css?1725149017" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725149017" rel="stylesheet">
+    <link href="/css/hybrid.css?1725149017" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725149017" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725149017" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725149017" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725149017" rel="stylesheet">
+    <link href="/css/theme.css?1725149017" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725149017" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1634205109" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725149017" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1634205109"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725149017"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1634205109"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1634205109"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725149017"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725149017"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1634205109"></script>
+<script type="text/javascript" src="/js/search.js?1725149017"></script>
 
     
   </div>
@@ -82,12 +82,12 @@
  
   
     
-    <li data-nav-id="/vi/1-create-new-aws-account/" title="Tạo mới tài khoản AWS" class="dd-item 
+    <li data-nav-id="/vi/workshop-outline/" title="Tạo mới tài khoản AWS" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-create-new-aws-account/">
+      <a href="/vi/workshop-outline/">
           <b>1. </b>Tạo mới tài khoản AWS
           
             <i class="fas fa-check read-icon"></i>
@@ -108,114 +108,18 @@
  
   
     
-    <li data-nav-id="/vi/2-mfa-setup-for-aws-user-root/" title="MFA cho Tài khoản AWS" class="dd-item 
+    <li data-nav-id="/vi/environment-setup/" title="MFA cho Tài khoản AWS" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-mfa-setup-for-aws-user-root/">
+      <a href="/vi/environment-setup/">
           <b>2. </b>MFA cho Tài khoản AWS
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/" title="Thiết bị MFA ảo" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/">
-          <b>2.1. </b>Thiết bị MFA ảo
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/" title="Khóa bảo mật U2F" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/">
-          <b>2.2. </b>Khóa bảo mật U2F
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/" title="Thiết bị MFA cứng" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/">
-          <b>2.3. </b>Thiết bị MFA cứng
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -237,32 +141,6 @@
         ">
       <a href="/vi/3-create-admin-user-and-group/">
           <b>3. </b>Tạo Admin Group và Admin User
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-verify-new-account/" title="Hỗ trợ Xác thực Tài khoản" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-verify-new-account/">
-          <b>4. </b>Hỗ trợ Xác thực Tài khoản
           
             <i class="fas fa-check read-icon"></i>
           
@@ -309,7 +187,7 @@
                   
                     
                     
-                      <option id="en" value="/3-create-admin-user-and-group/">English</option>
+                      <option id="en" value="//localhost:1313/3-create-admin-user-and-group/">English</option>
                     
                   
               
@@ -323,7 +201,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/3-create-admin-user-and-group/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/3-create-admin-user-and-group/" selected>Tiếng Việt</option>
                     
                   
               
@@ -457,16 +335,16 @@
 <li><strong>Đăng nhập vào Bảng điều khiển</strong> ở trang <a href="https://aws.amazon.com/">AWS Web Service page</a></li>
 <li>Nhấn vào tên tài khoản ở góc trên bên phải và chọn <strong>My Security Credentials</strong></li>
 </ol>
-<p><img src="/images/1-account-setup/MySecurity.png?width=15pc" alt="Image"></p>
+<p><img alt="Image" src="/images/1-account-setup/MySecurity.png?width=15pc"></p>
 <ol start="3">
 <li>Ở thanh bên trái, chọn <strong>User Groups</strong> sau đó chọn <strong>Create Group</strong></li>
 <li>Dưới mục <strong>Name the group</strong>, nhập tên Group (Ví dụ: <em>AdminGroup</em>) và cuộn chuột xuống dưới</li>
 </ol>
-<p><img src="/images/1-account-setup/GroupName.png?width=90pc" alt="Image"></p>
+<p><img alt="Image" src="/images/1-account-setup/GroupName.png?width=90pc"></p>
 <ol start="5">
 <li>Ở phần <strong>Attach permissions policies</strong>, gõ <strong>AdministratorAccess</strong> vào thanh tìm kiếm và nhấn chọn nó. Cuối cùng, chọn <strong>Create Group</strong>.</li>
 </ol>
-<p><img src="/images/1-account-setup/GroupPolicy.png?width=90pc" alt="Image"></p>
+<p><img alt="Image" src="/images/1-account-setup/GroupPolicy.png?width=90pc"></p>
 <h4 id="tạo-admin-user">Tạo Admin User</h4>
 <ol>
 <li>Ở thanh bên trái, chọn <strong>Users</strong> sau đó chọn <strong>Add User</strong></li>
@@ -479,7 +357,7 @@
 <li>Bỏ chọn mục <strong>User must create a new password&hellip;</strong>.</li>
 <li>Click <strong>Next:Permissions</strong>.</li>
 </ul>
-<p><img src="/images/1-account-setup/AddUser.png?width=90pc" alt="Image"></p>
+<p><img alt="Image" src="/images/1-account-setup/AddUser.png?width=90pc"></p>
 
 <div class="notices note" ><p>Bằng cách chọn <strong>AWS Management Console access</strong>, bạn vừa cho phép IAM User được truy cập vào AWS thông qua bảng điều khiển AWS trên web.<br>
 Việc bỏ mục <strong>User must create a new password&hellip;</strong> cho phép người dùng khi lần đầu đăng nhập vào IAM User đó không cần phải tạo mật khẩu mới.</p>
@@ -563,21 +441,6 @@ Việc bỏ mục <strong>User must create a new password&hellip;</strong> cho p
 
                     
                     
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                     
 
                     
@@ -589,60 +452,6 @@ Việc bỏ mục <strong>User must create a new password&hellip;</strong> cho p
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -664,10 +473,10 @@ Việc bỏ mục <strong>User must create a new password&hellip;</strong> cho p
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/" title="Thiết bị MFA cứng"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/environment-setup/" title="MFA cho Tài khoản AWS"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/4-verify-new-account/" title="Hỗ trợ Xác thực Tài khoản" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/workshop-outline/" title="Tạo mới tài khoản AWS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -677,19 +486,19 @@ Việc bỏ mục <strong>User must create a new password&hellip;</strong> cho p
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1634205109"></script>
-    <script src="/js/perfect-scrollbar.min.js?1634205109"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1634205109"></script>
-    <script src="/js/jquery.sticky.js?1634205109"></script>
-    <script src="/js/featherlight.min.js?1634205109"></script>
-    <script src="/js/highlight.pack.js?1634205109"></script>
+    <script src="/js/clipboard.min.js?1725149017"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725149017"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725149017"></script>
+    <script src="/js/jquery.sticky.js?1725149017"></script>
+    <script src="/js/featherlight.min.js?1725149017"></script>
+    <script src="/js/highlight.pack.js?1725149017"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1634205109"></script>
-    <script src="/js/learn.js?1634205109"></script>
-    <script src="/js/hugo-learn.js?1634205109"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725149017"></script>
+    <script src="/js/learn.js?1725149017"></script>
+    <script src="/js/hugo-learn.js?1725149017"></script>
 
-    <link href="/mermaid/mermaid.css?1634205109" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1634205109"></script>
+    <link href="/mermaid/mermaid.css?1725149017" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725149017"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Hardware MFA Device :: AWS Account Setup</title>
 
     
-    <link href="/css/nucleus.css?1634205109" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1634205109" rel="stylesheet">
-    <link href="/css/hybrid.css?1634205109" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1634205109" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1634205109" rel="stylesheet">
-    <link href="/css/auto-complete.css?1634205109" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1634205109" rel="stylesheet">
-    <link href="/css/theme.css?1634205109" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1634205109" rel="stylesheet">
+    <link href="/css/nucleus.css?1725148526" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725148526" rel="stylesheet">
+    <link href="/css/hybrid.css?1725148526" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725148526" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725148526" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725148526" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725148526" rel="stylesheet">
+    <link href="/css/theme.css?1725148526" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725148526" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1634205109" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725148526" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1634205109"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725148526"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1634205109"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1634205109"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725148526"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725148526"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1634205109"></script>
+<script type="text/javascript" src="/js/search.js?1725148526"></script>
 
     
   </div>
@@ -309,7 +309,7 @@
                   
                     
                     
-                      <option id="en" value="/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/" selected>English</option>
+                      <option id="en" value="//localhost:1313/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/" selected>English</option>
                     
                   
               
@@ -323,7 +323,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/">Tiếng Việt</option>
                     
                   
               
@@ -463,72 +463,72 @@
 </div>
 
 <h4 id="enabling-a-hardware-mfa-device-through-console">Enabling a hardware MFA device through Console</h4>
-<p>A hardware MFA device generates a six-digit numeric code based upon a time-synchronized one-time password algorithm. 
+<p>A hardware MFA device generates a six-digit numeric code based upon a time-synchronized one-time password algorithm.
 Hardware MFA devices and U2F security keys are both physical devices that you purchase. The difference is that hardware MFA devices generate a code that you view and then enter when prompted when signing it to AWS.</p>
 <ol>
 <li>Sign-in to the AWS Console.</li>
 <li>In the upper right corner, you&rsquo;ll see your account name, select and select <strong>My Security Credentials</strong>.</li>
 </ol>
-<p><img src="/images/1-account-setup/MySecurity_v1.png?width=15pc" alt="Image"></p>
+<p><img alt="Image" src="/images/1-account-setup/MySecurity_v1.png?width=15pc"></p>
 <p><strong>Note:</strong> To manage a hardware MFA device for your own IAM user while protecting sensitive MFA-related actions, you must have the permissions from the following policy.</p>
 <!-- raw HTML omitted -->
 <blockquote>
 <ol>
 <li>In the left bar, select <strong>Policies</strong> then select <strong>Create policy</strong>. Select <strong>JSON</strong> tab and paste the policy document from below:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-    <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
-    <span style="color:#f92672">&#34;Statement&#34;</span>: [
-        {
-            <span style="color:#f92672">&#34;Sid&#34;</span>: <span style="color:#e6db74">&#34;AllowManageOwnUserMFA&#34;</span>,
-            <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
-            <span style="color:#f92672">&#34;Action&#34;</span>: [
-                <span style="color:#e6db74">&#34;iam:DeactivateMFADevice&#34;</span>,
-                <span style="color:#e6db74">&#34;iam:EnableMFADevice&#34;</span>,
-                <span style="color:#e6db74">&#34;iam:GetUser&#34;</span>,
-                <span style="color:#e6db74">&#34;iam:ListMFADevices&#34;</span>,
-                <span style="color:#e6db74">&#34;iam:ResyncMFADevice&#34;</span>
-            ],
-            <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:iam::*:user/${aws:username}&#34;</span>
-        },
-        {
-            <span style="color:#f92672">&#34;Sid&#34;</span>: <span style="color:#e6db74">&#34;DenyAllExceptListedIfNoMFA&#34;</span>,
-            <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Deny&#34;</span>,
-            <span style="color:#f92672">&#34;NotAction&#34;</span>: [
-                <span style="color:#e6db74">&#34;iam:EnableMFADevice&#34;</span>,
-                <span style="color:#e6db74">&#34;iam:GetUser&#34;</span>,
-                <span style="color:#e6db74">&#34;iam:ListMFADevices&#34;</span>,
-                <span style="color:#e6db74">&#34;iam:ResyncMFADevice&#34;</span>
-            ],
-            <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:iam::*:user/${aws:username}&#34;</span>,
-            <span style="color:#f92672">&#34;Condition&#34;</span>: {
-                <span style="color:#f92672">&#34;BoolIfExists&#34;</span>: {
-                    <span style="color:#f92672">&#34;aws:MultiFactorAuthPresent&#34;</span>: <span style="color:#e6db74">&#34;false&#34;</span>
-                }
-            }
-        }
-    ]
-}
-</code></pre></div><ol start="2">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Statement&#34;</span>: [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Sid&#34;</span>: <span style="color:#e6db74">&#34;AllowManageOwnUserMFA&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Action&#34;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;iam:DeactivateMFADevice&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;iam:EnableMFADevice&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;iam:GetUser&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;iam:ListMFADevices&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;iam:ResyncMFADevice&#34;</span>
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:iam::*:user/${aws:username}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Sid&#34;</span>: <span style="color:#e6db74">&#34;DenyAllExceptListedIfNoMFA&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Deny&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;NotAction&#34;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;iam:EnableMFADevice&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;iam:GetUser&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;iam:ListMFADevices&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;iam:ResyncMFADevice&#34;</span>
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:iam::*:user/${aws:username}&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Condition&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;BoolIfExists&#34;</span>: {
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;aws:MultiFactorAuthPresent&#34;</span>: <span style="color:#e6db74">&#34;false&#34;</span>
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="2">
 <li>Select <strong>Next: Tags</strong>. You&rsquo;ll be presented with a screen about <strong>Tags</strong>, a tool used to identify groups of AWS resources.</li>
 <li>Select <strong>Next: Review</strong>. This is a screen that allows you to review the policy that you are creating.</li>
 <li>Enter the name of the policy (for example, <code>MFAHardDevice</code>) and select <strong>Create policy</strong>.</li>
 </ol>
-<p><img src="/images/1-account-setup/MFAPolicy.png?width=90pc" alt="MFA Policy"></p>
+<p><img alt="MFA Policy" src="/images/1-account-setup/MFAPolicy.png?width=90pc"></p>
 </blockquote>
 <ol start="3">
 <li>In the left bar, select <strong>Dashboard</strong> and then select <strong>Enable MFA</strong>.</li>
 </ol>
-<p><img src="/images/1-account-setup/Dashboard.png?width=90pc" alt="Dashboard"></p>
+<p><img alt="Dashboard" src="/images/1-account-setup/Dashboard.png?width=90pc"></p>
 <ol start="4">
 <li>Expand Multi-factor authentication (MFA) and then select <strong>Active MFA</strong>.</li>
 </ol>
-<p><img src="/images/1-account-setup/MFA.png?width=90pc" alt="MFA Section"></p>
+<p><img alt="MFA Section" src="/images/1-account-setup/MFA.png?width=90pc"></p>
 <ol start="5">
 <li>Under <strong>Manage MFA Device</strong>, select <strong>Other Hardware MFA Device</strong> then press <strong>Continue</strong>.</li>
 <li>Enter <strong>Serial Number</strong> in the back of the device.</li>
 </ol>
-<p><img src="/images/1-account-setup/HardwareMFA.png?width=30pc" alt="Image"></p>
+<p><img alt="Image" src="/images/1-account-setup/HardwareMFA.png?width=30pc"></p>
 <ol start="7">
 <li>Enter MFA code 1. Wait 30 seconds or until the code changes, then enter MFA code 2.</li>
 <li>Select <strong>Assign MFA</strong>.</li>
@@ -715,19 +715,19 @@ Hardware MFA devices and U2F security keys are both physical devices that you pu
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1634205109"></script>
-    <script src="/js/perfect-scrollbar.min.js?1634205109"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1634205109"></script>
-    <script src="/js/jquery.sticky.js?1634205109"></script>
-    <script src="/js/featherlight.min.js?1634205109"></script>
-    <script src="/js/highlight.pack.js?1634205109"></script>
+    <script src="/js/clipboard.min.js?1725148526"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725148526"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725148526"></script>
+    <script src="/js/jquery.sticky.js?1725148526"></script>
+    <script src="/js/featherlight.min.js?1725148526"></script>
+    <script src="/js/highlight.pack.js?1725148526"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1634205109"></script>
-    <script src="/js/learn.js?1634205109"></script>
-    <script src="/js/hugo-learn.js?1634205109"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725148526"></script>
+    <script src="/js/learn.js?1725148526"></script>
+    <script src="/js/hugo-learn.js?1725148526"></script>
 
-    <link href="/mermaid/mermaid.css?1634205109" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1634205109"></script>
+    <link href="/mermaid/mermaid.css?1725148526" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725148526"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
