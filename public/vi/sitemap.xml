@@ -2,30 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/vi/1-create-new-aws-account/</loc>
+    <loc>//localhost:1313/vi/workshop-outline/</loc>
     <lastmod>2020-05-14T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/1-create-new-aws-account/"
+                href="//localhost:1313/workshop-outline/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/1-create-new-aws-account/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/"
+                href="//localhost:1313/vi/workshop-outline/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/</loc>
@@ -41,69 +28,43 @@
                 href="//localhost:1313/vi/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/</loc>
+    <loc>//localhost:1313/vi/environment-setup/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-mfa-setup-for-aws-user-root/2-u2f-security-key/"
+                href="//localhost:1313/environment-setup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/"
+                href="//localhost:1313/vi/environment-setup/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/2-mfa-setup-for-aws-user-root/</loc>
+    <loc>//localhost:1313/vi/tasks/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-mfa-setup-for-aws-user-root/"
+                href="//localhost:1313/tasks/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-mfa-setup-for-aws-user-root/"
+                href="//localhost:1313/vi/tasks/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-create-admin-user-and-group/</loc>
+    <loc>//localhost:1313/vi/tasks/task-1-create-a-dynamodb-table/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-create-admin-user-and-group/"
+                href="//localhost:1313/tasks/task-1-create-a-dynamodb-table/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-create-admin-user-and-group/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/4-verify-new-account/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-verify-new-account/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-verify-new-account/"
+                href="//localhost:1313/vi/tasks/task-1-create-a-dynamodb-table/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/categories/</loc>
