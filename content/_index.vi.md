@@ -1,40 +1,41 @@
 +++
-title = "Thiết lập Tài Khoản AWS"
-date = 2021
+title = "Xây dựng ứng dụng Text-to-Speech không máy chủ với Amazon Polly"
+date = 2024
 weight = 1
 chapter = false
 +++
 
-# Tạo tài khoản AWS đầu tiên
+# Xây dựng ứng dụng Text-to-Speech không máy chủ với Amazon Polly
 
-#### Tổng quan
-Trong bài lab đầu tiên này, bạn sẽ tạo mới **tài khoản AWS** đầu tiên của mình, tạo **MFA** (Multi-factor Authentication) để gia tăng bảo mật tài khoản của bạn. Bước tiếp theo bạn sẽ tạo **Admin Group**, **Admin User** để quản lý quyền truy cập vào các tài nguyên trong tài khoản của mình thay vì sử dụng user root.\
-Cuối cùng, nếu quá trình xác thực tài khoản của bạn có vấn đề, bạn sẽ được hướng dẫn hỗ trợ xác thực tài khoản với **AWS Support**.
+## Tổng quan
 
-#### Tài khoản AWS (AWS Account)
-**Tài khoản AWS** là phương tiện để bạn có thể truy cập và sử dụng những tài nguyên và dịch vụ của AWS. Theo mặc định, mỗi tài khoản AWS sẽ có một *root user*. *Root user* có toàn quyền với tài khoản AWS của bạn, và quyền hạn của root user không thể bị giới hạn. Nếu bạn mới sử dụng tài khoản AWS lần đầu tiên, bạn sẽ truy cập vào tài khoản dưới danh nghĩa của *root user*.
+Tổng hợp giọng nói là một thách thức phức tạp. Việc đọc từng chữ cái trong một câu không đảm bảo kết quả có ý nghĩa. Một số thách thức phổ biến trong ứng dụng text-to-speech bao gồm:
 
-{{% notice note %}}
-Chính vì quyền hạn của **root user** không thể bị giới hạn, AWS khuyên bạn không nên sử dụng trực tiếp *root user* cho bất kỳ công tác nào. Thay vào đó, bạn nên tạo ra một *IAM User* và trao quyền quản trị cho *IAM User* đó để dễ dàng quản lý và giảm thiểu rủi ro.
-{{% /notice %}}
+1. **Từ đồng âm khác nghĩa:** "Tôi sống ở Las Vegas" so với "Buổi thuyết trình này phát trực tiếp từ Las Vegas".
+2. **Chuẩn hóa văn bản:** Giải mã viết tắt, từ viết tắt và đơn vị đo lường. Ví dụ: "St." có thể là "Street" hoặc "Saint".
+3. **Chuyển đổi văn bản thành âm vị:** Trong tiếng Anh, "tough", "through", và "though" có cách phát âm khác nhau tùy thuộc vào ngữ cảnh.
+4. **Từ ngoại lai:** "déjà vu", tên riêng như "François Hollande", và tiếng lóng như "ASAP", "LOL".
 
-#### MFA (Multi-factor Authentication)
-**MFA** là một tính năng được sử dụng để gia tăng bảo mật của tài khoản AWS. Nếu MFA được kích hoạt, bạn sẽ phải nhập mã OTP (One-time Password) mỗi lần bạn đăng nhập vào tài khoản AWS.
+Amazon Polly cung cấp giải pháp vượt qua những thách thức này, cho phép bạn tập trung vào việc xây dựng ứng dụng text-to-speech mà không cần lo lắng về vấn đề diễn giải.
 
-#### IAM Group 
-**IAM Group**  là một công cụ quản lý người dùng (*IAM User*) của AWS. Một IAM Group có thể chứa nhiều IAM User. Các IAM User ở trong một IAM Group đều hưởng chung quyền hạn mà IAM Group đó được gán cho.
+## Amazon Polly: Công nghệ AI tiên tiến
 
-#### IAM User
-**IAM User** là một đơn vị người dùng của AWS. Khi bạn đăng nhập vào AWS, bạn sẽ phải đăng nhập dưới danh nghĩa của một IAM User. Nếu bạn mới đăng nhập vào AWS lần đầu tiên, bạn sẽ đăng nhập dưới danh nghĩa của *root user* (tạm dịch là người dùng gốc). Ngoài *root user* ra, bạn có thể tạo ra nhiều IAM User khác để cho phép người khác truy cập **dài hạn** vào tài nguyên AWS trong tài khoản AWS của bạn.
+Amazon Polly chuyển đổi văn bản thành giọng nói tự nhiên, cho phép bạn tạo ra các ứng dụng có khả năng giao tiếp như con người. Đây là dịch vụ AI của Amazon sử dụng công nghệ học sâu tiên tiến để tổng hợp giọng nói giống người thật. Hiện tại, Polly hỗ trợ hàng chục giọng nói chân thực bằng hơn 20 ngôn ngữ, giúp bạn xây dựng ứng dụng hỗ trợ giọng nói cho nhiều quốc gia khác nhau.
 
+### Ưu điểm nổi bật:
 
-#### AWS Support
-**AWS Support** là một đơn vị cung cấp các dịch vụ hỗ trợ khách hàng của AWS.
+- **Phản hồi nhanh:** Hỗ trợ đối thoại tương tác thời gian thực
+- **Lưu trữ linh hoạt:** Có thể lưu cache và tái sử dụng file âm thanh
+- **Không giới hạn sử dụng:** Không tính phí bổ sung cho việc sử dụng giọng nói đã chuyển đổi
+- **Dễ dàng tích hợp:** Chỉ cần gửi văn bản đến API của Amazon Polly
 
+## Mục tiêu workshop
 
-#### Nội dung chính
+Trong workshop này, bạn sẽ xây dựng một ứng dụng không máy chủ cơ bản sử dụng Amazon Polly để chuyển đổi văn bản thành giọng nói. Ứng dụng có giao diện người dùng đơn giản, cho phép nhập văn bản bằng nhiều ngôn ngữ khác nhau và chuyển đổi thành file âm thanh có thể phát trực tiếp trên trình duyệt web.
 
-1. [Tạo tài khoản AWS](1-create-new-aws-account/)
-2. [Thiết lập MFA cho tài khoản AWS (Root)](2-mfa-setup-for-aws-user-(root)/)
-3. [Tài khoản và Nhóm Admin](3-create-admin-user-and-group/)
-4. [Hỗ trợ Xác thực Tài khoản](4-verify-new-account/)
+Mặc dù workshop này sử dụng bài viết blog làm ví dụ, bạn có thể áp dụng cho nhiều loại văn bản khác như:
+
+- Đọc công thức nấu ăn trong khi nấu nướng
+- Nghe tin tức hoặc sách khi đang lái xe hoặc đạp xe
+
+Hãy bắt đầu hành trình khám phá công nghệ text-to-speech với Amazon Polly!

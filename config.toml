@@ -18,7 +18,7 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = "AWS Account Setup"
+title = "ihatesea"
 weight = 1
 languageName = "English"
 
@@ -29,7 +29,7 @@ url = "https://www.facebook.com/groups/awsstudygroupfcj/"
 weight = 20
 
 [Languages.vi]
-title = "Thiết lập AWS Account"
+title = "ihatesea"
 weight = 2
 languageName = "Tiếng Việt"
 

@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="vi" class="js csstransforms3d">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="description" content="">
+<meta name="author" content="journeyoftheaverageguy@gmail.com">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Công khai hàm Lambda dưới dạng dịch vụ web RESTful :: ihatesea</title>
+
+    
+    <link href="/css/nucleus.css?1725180898" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725180898" rel="stylesheet">
+    <link href="/css/hybrid.css?1725180898" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725180898" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725180898" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725180898" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725180898" rel="stylesheet">
+    <link href="/css/theme.css?1725180898" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725180898" rel="stylesheet">
+    
+    <link href="/css/theme-workshop.css?1725180898" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1725180898"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/vi/tasks/task-8-expose-the-lambda-function-as-a-restful-web-service/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1725180898"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725180898"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/localhost:1313\/\/vi";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1725180898"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1.-workshop-outline/" title="Đề cương Hội thảo" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1.-workshop-outline/">
+          <b>1. </b>Đề cương Hội thảo
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2.-environment-setup/" title="Thiết lập Môi trường" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2.-environment-setup/">
+          <b>2. </b>Thiết lập Môi trường
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/tasks/" title="Danh sách nhiệm vụ" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/vi/tasks/">
+          <b>3. </b>Danh sách nhiệm vụ
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/tasks/task-1-create-a-dynamodb-table-copy-9/" title="Tạo bảng DynamoDB" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/tasks/task-1-create-a-dynamodb-table-copy-9/">
+          <b>3.1 </b>Tạo bảng DynamoDB
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/tasks/task-2-create-an-amazon-s3-bucket/" title="Tạo Amazon S3 Bucket" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/tasks/task-2-create-an-amazon-s3-bucket/">
+          <b>3.2 </b>Tạo Amazon S3 Bucket
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/tasks/task-3-create-an-sns-topic/" title="Tạo một chủ đề SNS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/tasks/task-3-create-an-sns-topic/">
+          <b>3.3 </b>Tạo một chủ đề SNS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/tasks/task-4-create-a-new-post-lambda-function/" title="Tạo hàm Lambda cho bài viết mới" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/tasks/task-4-create-a-new-post-lambda-function/">
+          <b>3.4 </b>Tạo hàm Lambda cho bài viết mới
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/tasks/task-5-create-a-convert-to-audio-lambda-function/" title="Tạo hàm Lambda chuyển đổi văn bản thành âm thanh" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/tasks/task-5-create-a-convert-to-audio-lambda-function/">
+          <b>3.5 </b>Tạo hàm Lambda chuyển đổi văn bản thành âm thanh
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/tasks/task-6-test-the-functions/" title="Kiểm tra các hàm" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/tasks/task-6-test-the-functions/">
+          <b>3.6 </b>Kiểm tra các hàm
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/tasks/task-7-create-a-get-post-lambda-function/" title="Tạo hàm Lambda Get Post" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/tasks/task-7-create-a-get-post-lambda-function/">
+          <b>3.7 </b>Tạo hàm Lambda Get Post
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/tasks/task-8-expose-the-lambda-function-as-a-restful-web-service/" title="Công khai hàm Lambda dưới dạng dịch vụ web RESTful" class="dd-item 
+        
+        active
+        
+        ">
+      <a href="/vi/tasks/task-8-expose-the-lambda-function-as-a-restful-web-service/">
+          <b>3.8 </b>Công khai hàm Lambda dưới dạng dịch vụ web RESTful
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/tasks/task-9-create-a-serverless-user-interface/" title="Tạo giao diện người dùng không máy chủ" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/tasks/task-9-create-a-serverless-user-interface/">
+          <b>3.9 </b>Tạo giao diện người dùng không máy chủ
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4.-conclusion/" title="Kết luận" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4.-conclusion/">
+          <b>4. </b>Kết luận
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5.-clean-up/" title="Dọn Dẹp" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5.-clean-up/">
+          <b>5. </b>Dọn Dẹp
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"><i class='fab fa-facebook'></i> AWS Study Group</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="//localhost:1313/tasks/task-8-expose-the-lambda-function-as-a-restful-web-service/">English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="vi" value="//localhost:1313/vi/tasks/task-8-expose-the-lambda-function-as-a-restful-web-service/" selected>Tiếng Việt</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830891&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">First Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
+</left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>01-09-2024</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Danh Hoàng Hiếu Nghị</a>
+        </i>
+        </left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/vi/'>Xây dựng ứng dụng Text-to-Speech không máy chủ với Amazon Polly</a> > <a href='/vi/tasks/'>Danh sách nhiệm vụ</a> > Công khai hàm Lambda dưới dạng dịch vụ web RESTful
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#nhiệm-vụ-8-công-khai-hàm-lambda-dưới-dạng-dịch-vụ-web-restful">Nhiệm vụ 8: Công khai hàm Lambda dưới dạng dịch vụ web RESTful</a></li>
+    <li><a href="#tạo-api-gateway">Tạo API Gateway</a></li>
+    <li><a href="#cấu-hình-các-phương-thức-http">Cấu hình các phương thức HTTP</a>
+      <ul>
+        <li><a href="#phương-thức-post">Phương thức POST</a></li>
+        <li><a href="#phương-thức-get">Phương thức GET</a></li>
+      </ul>
+    </li>
+    <li><a href="#kích-hoạt-cors">Kích hoạt CORS</a></li>
+    <li><a href="#cấu-hình-tham-số-query">Cấu hình Tham số Query</a></li>
+    <li><a href="#thiết-lập-request-mapping">Thiết lập Request Mapping</a></li>
+    <li><a href="#triển-khai-api">Triển khai API</a></li>
+    <li><a href="#-chúc-mừng">🎉 Chúc mừng!</a>
+      <ul>
+        <li><a href="#các-bước-tiếp-theo">Các bước tiếp theo</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Công khai hàm Lambda dưới dạng dịch vụ web RESTful
+            </h1>
+          
+
+        
+
+
+
+	<h2 id="nhiệm-vụ-8-công-khai-hàm-lambda-dưới-dạng-dịch-vụ-web-restful">Nhiệm vụ 8: Công khai hàm Lambda dưới dạng dịch vụ web RESTful</h2>
+<p>Trong nhiệm vụ quan trọng này, chúng ta sẽ sử dụng Amazon API Gateway để công khai các hàm Lambda của chúng ta dưới dạng dịch vụ web RESTful. Điều này cho phép dễ dàng gọi logic ứng dụng của chúng ta bằng cách sử dụng các giao thức HTTP tiêu chuẩn, nâng cao khả năng truy cập và tích hợp.</p>
+<h2 id="tạo-api-gateway">Tạo API Gateway</h2>
+<ol>
+<li>Điều hướng đến Bảng điều khiển AWS Management Console</li>
+<li>Trong thanh tìm kiếm, gõ &ldquo;API Gateway&rdquo; và chọn nó</li>
+<li>Trong bảng REST API, nhấp vào &ldquo;Build&rdquo;</li>
+<li>Cấu hình chi tiết API:
+<ul>
+<li>Chọn &ldquo;New API&rdquo;</li>
+<li>Tên API: <code>PostReaderAPI</code></li>
+<li>Mô tả: API cho Ứng dụng PostReader</li>
+<li>Loại Endpoint: Regional</li>
+</ul>
+</li>
+<li>Nhấp vào &ldquo;Create API&rdquo;</li>
+</ol>
+<h2 id="cấu-hình-các-phương-thức-http">Cấu hình các phương thức HTTP</h2>
+<h3 id="phương-thức-post">Phương thức POST</h3>
+<ol>
+<li>Trong bảng Resources, chọn tài nguyên gốc (/)</li>
+<li>Nhấp vào &ldquo;Create Method&rdquo; và chọn POST</li>
+<li>Thiết lập hàm Lambda:
+<ul>
+<li>Hàm Lambda: Chọn hàm chứa <code>PostReader_NewPost</code></li>
+</ul>
+</li>
+<li>Nhấp vào &ldquo;Create Method&rdquo;</li>
+</ol>
+<h3 id="phương-thức-get">Phương thức GET</h3>
+<ol>
+<li>Trong bảng Resources, chọn tài nguyên gốc (/)</li>
+<li>Nhấp vào &ldquo;Create Method&rdquo; và chọn GET</li>
+<li>Thiết lập hàm Lambda:
+<ul>
+<li>Hàm Lambda: Chọn hàm chứa <code>PostReader_GetPost</code></li>
+</ul>
+</li>
+<li>Nhấp vào &ldquo;Create Method&rdquo;</li>
+</ol>
+<h2 id="kích-hoạt-cors">Kích hoạt CORS</h2>
+<p>Cross-Origin Resource Sharing (CORS) cho phép gọi API từ các tên miền khác nhau:</p>
+<ol>
+<li>Chọn tài nguyên gốc (/)</li>
+<li>Nhấp vào &ldquo;Enable CORS&rdquo;</li>
+<li>Cấu hình cài đặt CORS:
+<ul>
+<li>Phản hồi Gateway: Chọn &ldquo;Default 4XX&rdquo; và &ldquo;Default 5XX&rdquo;</li>
+<li>Access-Control-Allow-Methods: Chọn GET và POST</li>
+</ul>
+</li>
+<li>Nhấp vào &ldquo;Save&rdquo;</li>
+</ol>
+<h2 id="cấu-hình-tham-số-query">Cấu hình Tham số Query</h2>
+<p>Đối với phương thức GET:</p>
+<ol>
+<li>Chọn phương thức GET</li>
+<li>Trong cài đặt Method Request, nhấp vào &ldquo;Edit&rdquo;</li>
+<li>Mở rộng &ldquo;URL Query String Parameters&rdquo;</li>
+<li>Thêm một tham số query:
+<ul>
+<li>Tên: <code>postId</code></li>
+</ul>
+</li>
+<li>Nhấp vào &ldquo;Save&rdquo;</li>
+</ol>
+<h2 id="thiết-lập-request-mapping">Thiết lập Request Mapping</h2>
+<p>Để đảm bảo định dạng JSON đúng:</p>
+<ol>
+<li>Chọn phương thức GET</li>
+<li>Đi đến tab &ldquo;Integration Request&rdquo;</li>
+<li>Chỉnh sửa cài đặt:
+<ul>
+<li>Request body passthrough: &ldquo;When there are no templates defined (recommended)&rdquo;</li>
+</ul>
+</li>
+<li>Mở rộng &ldquo;Mapping Templates&rdquo;</li>
+<li>Thêm một mẫu mapping:
+<ul>
+<li>Content-Type: <code>application/json</code></li>
+<li>Nội dung mẫu:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;postId&#34;</span>: <span style="color:#e6db74">&#34;$input.params(&#39;postId&#39;)&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>Nhấp vào &ldquo;Save&rdquo;</li>
+</ol>
+<h2 id="triển-khai-api">Triển khai API</h2>
+<ol>
+<li>Nhấp vào &ldquo;Deploy API&rdquo;</li>
+<li>Tạo một stage mới:
+<ul>
+<li>Tên stage: <code>Dev</code></li>
+</ul>
+</li>
+<li>Nhấp vào &ldquo;Deploy&rdquo;</li>
+<li>Sao chép &ldquo;Invoke URL&rdquo; và lưu lại để sử dụng sau</li>
+</ol>
+<h2 id="-chúc-mừng">🎉 Chúc mừng!</h2>
+<p>Bạn đã công khai thành công các hàm Lambda của mình dưới dạng dịch vụ web RESTful bằng cách sử dụng Amazon API Gateway. Sự tích hợp mạnh mẽ này cho phép giao tiếp liền mạch giữa backend không máy chủ của bạn và các ứng dụng hoặc dịch vụ front-end khác nhau.</p>
+<h3 id="các-bước-tiếp-theo">Các bước tiếp theo</h3>
+<ul>
+<li>Kiểm tra các endpoint API của bạn bằng các công cụ như Postman hoặc cURL</li>
+<li>Triển khai các biện pháp bảo mật thích hợp, chẳng hạn như khóa API hoặc tích hợp AWS Cognito</li>
+<li>Xem xét thiết lập các kế hoạch sử dụng API và điều chỉnh để quản lý lưu lượng</li>
+</ul>
+<p>Bằng cách hoàn thành nhiệm vụ này, bạn đã thêm một lớp truy cập quan trọng vào ứng dụng blog-to-audio không máy chủ của mình, mở đường cho các tương tác khách hàng mạnh mẽ và có thể mở rộng.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/vi/tasks/task-7-create-a-get-post-lambda-function/" title="Tạo hàm Lambda Get Post"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/vi/tasks/task-9-create-a-serverless-user-interface/" title="Tạo giao diện người dùng không máy chủ" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1725180898"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725180898"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725180898"></script>
+    <script src="/js/jquery.sticky.js?1725180898"></script>
+    <script src="/js/featherlight.min.js?1725180898"></script>
+    <script src="/js/highlight.pack.js?1725180898"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725180898"></script>
+    <script src="/js/learn.js?1725180898"></script>
+    <script src="/js/hugo-learn.js?1725180898"></script>
+
+    <link href="/mermaid/mermaid.css?1725180898" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725180898"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-158079754-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
