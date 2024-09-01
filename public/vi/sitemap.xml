@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>//localhost:1313/vi/1.-workshop-outline/</loc>
-    <lastmod>2020-05-14T00:38:32+07:00</lastmod>
+    <lastmod>1970-01-01T07:33:44+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -13,32 +13,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/1.-workshop-outline/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/4.-conclusion/</loc>
-    <lastmod>2020-05-14T00:38:32+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4.-conclusion/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4.-conclusion/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/5.-clean-up/</loc>
-    <lastmod>2020-05-14T00:38:32+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5.-clean-up/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5.-clean-up/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/</loc>
@@ -52,32 +26,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/2.-environment-setup/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/2.-environment-setup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/2.-environment-setup/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/tasks/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/tasks/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/tasks/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/tasks/task-1-create-a-dynamodb-table-copy-9/</loc>
@@ -94,7 +42,7 @@
                 />
   </url><url>
     <loc>//localhost:1313/vi/tasks/task-2-create-an-amazon-s3-bucket/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <lastmod>1970-01-01T07:33:43+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -106,8 +54,21 @@
                 href="//localhost:1313/vi/tasks/task-2-create-an-amazon-s3-bucket/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/tasks/task-3-create-an-sns-topic/</loc>
+    <loc>//localhost:1313/vi/2.-environment-setup/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2.-environment-setup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2.-environment-setup/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/tasks/task-3-create-an-sns-topic/</loc>
+    <lastmod>1970-01-01T07:33:43+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -119,8 +80,34 @@
                 href="//localhost:1313/vi/tasks/task-3-create-an-sns-topic/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/tasks/task-4-create-a-new-post-lambda-function/</loc>
+    <loc>//localhost:1313/vi/tasks/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/tasks/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/tasks/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/4.-conclusion/</loc>
+    <lastmod>2020-05-14T00:38:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/4.-conclusion/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/4.-conclusion/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/tasks/task-4-create-a-new-post-lambda-function/</loc>
+    <lastmod>1970-01-01T07:33:43+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -132,8 +119,21 @@
                 href="//localhost:1313/vi/tasks/task-4-create-a-new-post-lambda-function/"
                 />
   </url><url>
+    <loc>//localhost:1313/vi/5.-clean-up/</loc>
+    <lastmod>2020-05-14T00:38:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/5.-clean-up/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/5.-clean-up/"
+                />
+  </url><url>
     <loc>//localhost:1313/vi/tasks/task-5-create-a-convert-to-audio-lambda-function/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <lastmod>1970-01-01T07:33:43+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -146,7 +146,7 @@
                 />
   </url><url>
     <loc>//localhost:1313/vi/tasks/task-6-test-the-functions/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <lastmod>1970-01-01T07:33:43+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -159,7 +159,7 @@
                 />
   </url><url>
     <loc>//localhost:1313/vi/tasks/task-7-create-a-get-post-lambda-function/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <lastmod>1970-01-01T07:33:43+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -172,7 +172,7 @@
                 />
   </url><url>
     <loc>//localhost:1313/vi/tasks/task-8-expose-the-lambda-function-as-a-restful-web-service/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <lastmod>1970-01-01T07:33:43+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -185,7 +185,7 @@
                 />
   </url><url>
     <loc>//localhost:1313/vi/tasks/task-9-create-a-serverless-user-interface/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <lastmod>1970-01-01T07:33:43+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
